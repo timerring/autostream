@@ -46,7 +46,5 @@ brew install ffmpeg
 
 
 ```bash
-python autostream.py --server_url <server_url> --key <key> --file <input_file>
+python -m autostream.cli bili --server_url <server_url> --key <key> --file <input_file>
 ```
-
-
