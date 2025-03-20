@@ -2,13 +2,15 @@
 
 import subprocess
 from autostream.execute.scan_and_execute import scan_folder_and_execute
+from autostream.model.model import Model
 
 class BiliController:
-    def __init__(self, server_url, key, folder):
-        self.server_url = server_url
-        self.key = key
-        self.folder = folder
-
+    def __init__(self):
+        self.model = Model()
+        self.server_url = self.model.get_config()['bili_server_url']
+        self.key = self.model.get_config()['bili_key']
+        self.folder = self.model.get_config()['folder']
+    
     @property
     def stream_url(self):
         return f'{self.server_url}{self.key}'

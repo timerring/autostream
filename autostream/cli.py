@@ -5,6 +5,7 @@ import sys
 import os
 import logging
 from autostream.controller.bili_controller import BiliController
+from autostream.controller.config_controller import ConfigController
 
 
 def cli():
@@ -13,11 +14,20 @@ def cli():
 
     subparsers = parser.add_subparsers(dest='subcommand', help='Subcommands')
 
+    # Check config
+    check_config_parser = subparsers.add_parser('check', help='Check the configuration')
+
+    # Add config
+    add_config_parser = subparsers.add_parser('add', help='Add the configuration')
+    add_config_parser.add_argument('-s', '--bili_server_url', help='The bilibili server url')
+    add_config_parser.add_argument('-k', '--bili_key', help='The bilibili stream key')
+    add_config_parser.add_argument('-f', '--folder', help='The input folder')
+
+    # Reset config
+    reset_config_parser = subparsers.add_parser('reset', help='Reset the configuration')
+
     # Bilibili stream
-    bilibili_parser = subparsers.add_parser('bili', help='Stream on Bilibili')
-    bilibili_parser.add_argument('--server_url', required=True, help='(required) The server url')
-    bilibili_parser.add_argument('--key', required=True, help='(required) The stream key')
-    bilibili_parser.add_argument('--folder', required=True, help='(required) The input folder')
+    bilibili_parser = subparsers.add_parser('bili', help='Stream on the bilibili platform')
 
     args = parser.parse_args()
 
@@ -27,9 +37,26 @@ def cli():
         parser.print_help()
         sys.exit()
 
+    if args.subcommand == 'check':
+        ConfigController().check_config()
+        print(ConfigController().get_config())
+
+    if args.subcommand == 'add':
+        if args.bili_server_url:
+            ConfigController().update_specific_config('bili_server_url', args.bili_server_url)
+        if args.bili_key:
+            ConfigController().update_specific_config('bili_key', args.bili_key)
+        if args.folder:
+            ConfigController().update_specific_config('folder', args.folder)
+
+    if args.subcommand == 'reset':
+        ConfigController().reset_config()
+
     if args.subcommand == 'bili':
-        print(args)
-        BiliController(args.server_url, args.key, args.folder).stream()
+        if ConfigController().check_config():
+            BiliController().stream()
+        else:
+            print("Please complete the configuration first!", flush=True)
 
 if __name__ == '__main__':
     cli()
