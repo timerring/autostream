@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "autostream"
+version = "0.0.1"
+authors = [
+  { name="timerring"},
+]
+description = "The Python toolkit package and cli designed for auto streaming"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+autostream = "autostream.cli:cli"
+
+[project.urls]
+"Homepage" = "https://github.com/timerring/autostream"
