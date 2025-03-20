@@ -1,6 +1,6 @@
-# Copyright (c) 2025 autostream
+# Copyright (c) 2025 looplive
 
-from autostream.model.model import Model
+from looplive.model.model import Model
 
 class ConfigController:
     def __init__(self):

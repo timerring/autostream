@@ -1,8 +1,8 @@
-# Copyright (c) 2025 autostream
+# Copyright (c) 2025 looplive
 
 import subprocess
-from autostream.execute.scan_and_execute import scan_folder_and_execute
-from autostream.model.model import Model
+from looplive.execute.scan_and_execute import scan_folder_and_execute
+from looplive.model.model import Model
 
 class BiliController:
     def __init__(self):

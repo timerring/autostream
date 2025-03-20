@@ -3,12 +3,12 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "autostream"
+name = "looplive"
 version = "0.0.1"
 authors = [
   { name="timerring"},
 ]
-description = "The Python toolkit package and cli designed for auto streaming"
+description = "The Python toolkit package and cli designed for auto loop live."
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.8"
@@ -20,7 +20,7 @@ classifiers = [
 dependencies = []
 
 [project.scripts]
-autostream = "autostream.cli:cli"
+looplive = "looplive.cli:cli"
 
 [project.urls]
-"Homepage" = "https://github.com/timerring/autostream"
+"Homepage" = "https://github.com/timerring/looplive"

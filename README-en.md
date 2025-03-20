@@ -1,12 +1,12 @@
-# autostream
+# looplive
 
 [简体中文](./README.md) | English
 
-> Welcome to `autostream`! We appreciate your feedback and contributions through PRs. Please do not use this project for purposes that violate community guidelines.
+> Welcome to `looplive`! We appreciate your feedback and contributions through PRs. Please do not use this project for purposes that violate community guidelines.
 
-`autostream` is a fully automated 24/7 live streaming tool, with plans to support more platforms in the future.
+`looplive` is a fully automated 24/7 live streaming tool, with plans to support more platforms in the future.
 
-The Python toolkit package and CLI designed for auto streaming.
+The Python toolkit package and cli designed for auto loop live.
 
 ## Prerequisites
 
@@ -41,18 +41,18 @@ brew install ffmpeg
 > To avoid command parameters being incorrectly separated, please wrap each parameter in English double quotes `"`. The parameter `-f` is the folder where the video files are stored.
 
 ```bash
-autostream add -s "rtmp://xxxxxxxx" -k "?streamname=xxxxxxxx" -f "your/folder/path"
-autostream bili
+looplive add -s "rtmp://xxxxxxxx" -k "?streamname=xxxxxxxx" -f "your/folder/path"
+looplive bili
 ```
 
 ### More Usage
 
 ```bash
-$ autostream -h
+$ looplive -h
 
-autostream [-h] [-V] {check,add,reset,bili} ...
+looplive [-h] [-V] {check,add,reset,bili} ...
 
-The Python toolkit package and CLI designed for auto streaming
+The Python toolkit package and cli designed for auto loop live.
 
 positional arguments:
   {check,add,reset,bili}

@@ -352,5 +352,5 @@ $RECYCLE.BIN/
 # Specific for the MacOS
 .DS_Store
 
-# Specific for the autostream
+# Specific for the looplive
 videos/*
