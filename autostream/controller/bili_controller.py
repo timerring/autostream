@@ -1,18 +1,18 @@
 # Copyright (c) 2025 autostream
 
 import subprocess
+from autostream.execute.scan_and_execute import scan_folder_and_execute
 
 class BiliController:
-    def __init__(self, server_url, key, file):
+    def __init__(self, server_url, key, folder):
         self.server_url = server_url
         self.key = key
-        self.file = file
+        self.folder = folder
 
     @property
     def stream_url(self):
         return f'{self.server_url}{self.key}'
 
     def stream(self):
-        command = f'ffmpeg -re -i {self.file} -c copy -f flv "{self.stream_url}"'
-        subprocess.run(command, shell=True, check=True)
-        # return command
+        while True:
+            scan_folder_and_execute(self.folder, self.stream_url)
