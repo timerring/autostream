@@ -41,6 +41,7 @@ brew install ffmpeg
 > 为了避免命令参数被错误分隔，请使用英文双引号 `"` 包裹每一项参数。参数 `-f` 是视频文件的存放文件夹。
 
 ```bash
+pip install looplive
 looplive add -s "rtmp://xxxxxxxx" -k "?streamname=xxxxxxxx" -f "your/folder/path"
 looplive bili
 ```

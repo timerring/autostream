@@ -41,6 +41,7 @@ brew install ffmpeg
 > To avoid command parameters being incorrectly separated, please wrap each parameter in English double quotes `"`. The parameter `-f` is the folder where the video files are stored.
 
 ```bash
+pip install looplive
 looplive add -s "rtmp://xxxxxxxx" -k "?streamname=xxxxxxxx" -f "your/folder/path"
 looplive bili
 ```
