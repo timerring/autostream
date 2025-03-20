@@ -351,3 +351,6 @@ $RECYCLE.BIN/
 
 # Specific for the MacOS
 .DS_Store
+
+# Specific for the autostream
+videos/*

@@ -17,7 +17,7 @@ def cli():
     bilibili_parser = subparsers.add_parser('bili', help='Stream on Bilibili')
     bilibili_parser.add_argument('--server_url', required=True, help='(required) The server url')
     bilibili_parser.add_argument('--key', required=True, help='(required) The stream key')
-    bilibili_parser.add_argument('--file', required=True, help='(required) The input file')
+    bilibili_parser.add_argument('--folder', required=True, help='(required) The input folder')
 
     args = parser.parse_args()
 
@@ -29,7 +29,7 @@ def cli():
 
     if args.subcommand == 'bili':
         print(args)
-        BiliController(args.server_url, args.key, args.file).stream()
+        BiliController(args.server_url, args.key, args.folder).stream()
 
 if __name__ == '__main__':
     cli()
