@@ -1,16 +1,16 @@
-# Copyright (c) 2025 autostream
+# Copyright (c) 2025 looplive
 
 import argparse
 import sys
 import os
 import logging
-from autostream.controller.bili_controller import BiliController
-from autostream.controller.config_controller import ConfigController
+from looplive.controller.bili_controller import BiliController
+from looplive.controller.config_controller import ConfigController
 
 
 def cli():
-    parser = argparse.ArgumentParser(description='The Python toolkit package and cli designed for auto streaming')
-    parser.add_argument('-V', '--version', action='version', version='autostream 0.0.1', help='Print version information')
+    parser = argparse.ArgumentParser(description='The Python toolkit package and cli designed for auto loop live.')
+    parser.add_argument('-V', '--version', action='version', version='looplive 0.0.1', help='Print version information')
 
     subparsers = parser.add_subparsers(dest='subcommand', help='Subcommands')
 

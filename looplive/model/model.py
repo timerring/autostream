@@ -1,4 +1,4 @@
-# Copyright (c) 2025 autostream
+# Copyright (c) 2025 looplive
 
 import json
 import os
