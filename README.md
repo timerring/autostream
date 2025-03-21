@@ -27,7 +27,7 @@ brew install ffmpeg
 - Windows 和更多平台: 请参考 [官方页面](https://www.ffmpeg.org/download.html).
 - Python >= 3.8
 
-## 使用
+## 快速开始
 
 ### 开始直播
 
@@ -36,7 +36,7 @@ brew install ffmpeg
 2. 点击 `开始直播`.
 3. 获取推流服务器地址 `-s` 和串流密钥 `-k`。
 
-### 快速开始
+### 推流
 
 > 为了避免命令参数被错误分隔，请使用英文双引号 `"` 包裹每一项参数。参数 `-f` 是视频文件的存放文件夹。
 
@@ -44,6 +44,30 @@ brew install ffmpeg
 pip install looplive
 looplive add -s "rtmp://xxxxxxxx" -k "?streamname=xxxxxxxx" -f "your/folder/path"
 looplive bili
+```
+
+## Docker 部署
+
+### 配置文件
+
+`config.json` 文件中 `bili_server_url` 和 `bili_key` 需要从 [直播页面](https://link.bilibili.com/p/center/index#/my-room/start-live) 获取。
+
+```json
+{
+    "folder": "/app/looplive/videos",
+    "bili_server_url": "rtmp://xxxxxxx",
+    "bili_key": "?streamname=xxxxxxxxxxxxxx"
+}
+```
+
+### 运行
+
+```bash
+sudo docker run -it \
+    -v /your/path/to/config.json:/app/looplive/model/config.json \
+    -v /your/path/to/videos:/app/looplive/videos \
+    --name looplive_docker \
+    ghcr.io/timerring/looplive:0.0.1
 ```
 
 ### 更多用法

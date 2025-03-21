@@ -3,8 +3,8 @@
 from looplive.model.model import Model
 
 class ConfigController:
-    def __init__(self):
-        self.model = Model()
+    def __init__(self, path=None):
+        self.model = Model(path=path)
         
     def check_config(self):
         config_info = self.model.get_config()
