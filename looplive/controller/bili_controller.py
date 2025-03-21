@@ -2,14 +2,13 @@
 
 import subprocess
 from looplive.execute.scan_and_execute import scan_folder_and_execute
-from looplive.model.model import Model
+from looplive.controller.config_controller import ConfigController
 
 class BiliController:
-    def __init__(self):
-        self.model = Model()
-        self.server_url = self.model.get_config()['bili_server_url']
-        self.key = self.model.get_config()['bili_key']
-        self.folder = self.model.get_config()['folder']
+    def __init__(self, cc: ConfigController):
+        self.server_url = cc.get_config()['bili_server_url']
+        self.key = cc.get_config()['bili_key']
+        self.folder = cc.get_config()['folder']
     
     @property
     def stream_url(self):

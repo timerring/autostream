@@ -53,8 +53,9 @@ def cli():
         ConfigController().reset_config()
 
     if args.subcommand == 'bili':
-        if ConfigController().check_config():
-            BiliController().stream()
+        cc = ConfigController()
+        if cc.check_config():
+            BiliController(cc).stream()
         else:
             print("Please complete the configuration first!", flush=True)
 
