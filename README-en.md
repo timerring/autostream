@@ -1,12 +1,19 @@
-# looplive
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/headerDark.svg" />
+    <img src="assets/headerLight.svg" alt="bilitool" />
+  </picture>
+  <p> </p>
 
 [简体中文](./README.md) | English
 
-> Welcome to use, provide more feedback, and contribute to this project via PR. Please do not use it for purposes that violate community regulations.
-
 `looplive` is a 24/7 fully automated looping live streaming tool, expected to support more platforms.
 
-The Python toolkit package and CLI designed for auto loop live.
+The Python toolkit package and cli designed for auto loop live.
+
+</div>
+
+> Welcome to use, provide more feedback, and contribute to this project via PR. Please do not use it for purposes that violate community regulations.
 
 ## Preparation
 
