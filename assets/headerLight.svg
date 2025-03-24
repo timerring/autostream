@@ -11,14 +11,14 @@
 
       .heading {
         font-family: "Bungee Shade", sans-serif;
-        font-size: 4em;
+        font-size: 3.8em;
         font-weight: normal;
         fill: black;
       }
     </style>
   </defs>
   
-  <text class="heading" x="55%" y="80">
-    LOOP LIVE
+  <text class="heading" x="50%" y="80">
+     LOOP LIVE
   </text>
 </svg>
