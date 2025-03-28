@@ -51,12 +51,12 @@ pip install looplive
 
 > 为了避免命令参数被错误分隔，请使用英文双引号 `"` 包裹每一项参数。
 
-![bilibili](https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-06-11.png)
+![bilibili](https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-59-03.png)
 
 #### Youtube
 
 1. 前往 [直播页面](https://www.youtube.com/live_dashboard).
-3. 获取推流服务器地址(Stream URL) `-ys` 和串流密钥(Stream key) `-yk`。
+2. 获取推流服务器地址(Stream URL) `-ys` 和串流密钥(Stream key) `-yk`。
 
 > 为了避免命令参数被错误分隔，请使用英文双引号 `"` 包裹每一项参数。
 
@@ -70,12 +70,12 @@ pip install looplive
 
 ```bash
 # eg. 
-# 只需要推流到 Bilibili 的配置，只需添加一次
-looplive add -bs "rtmp://xxxxxxxx" -bk "?streamname=xxxxxxxx" -f "your/folder/path"
+# 只需要推流到 Bilibili 的配置，只需添加一次，例如
+looplive add -bs "rtmp://live-push.bilivideo.com/live-bvc/" -bk "?streamname=live_3541234541234567_8901234&key=looplivexxxxxxxxxxxxdgd&schedule=rtmp&pflag=1" -f "your/folder/path"
 # 只需要推流到 Youtube 的配置，只需添加一次
-looplive add -ys "rtmp://xxxxxxxx" -yk "xxxx-xxxx-xxxx-xxxx-xxxx" -f "your/folder/path"
+looplive add -ys "rtmp://a.rtmp.youtube.com/live2" -yk "ghkh-sfgg-loop-live-live" -f "your/folder/path"
 # 同时推流到 Bilibili 和 Youtube 的配置，只需添加一次
-looplive add -bs "rtmp://xxxxxxxx" -bk "?streamname=xxxxxxxx" -ys "rtmp://xxxxxxxx" -yk "xxxx-xxxx-xxxx-xxxx-xxxx" -f "your/folder/path"
+looplive add -bs "rtmp://live-push.bilivideo.com/live-bvc/" -bk "?streamname=live_3541234541234567_8901234&key=looplivexxxxxxxxxxxxdgd&schedule=rtmp&pflag=1" -ys "rtmp://a.rtmp.youtube.com/live2" -yk "ghkh-sfgg-loop-live-live" -f "your/folder/path"
 ```
 
 ### 推流
@@ -95,15 +95,13 @@ looplive both
 
 ### 配置文件
 
-`config.json` 文件中 `bili_server_url` 和 `bili_key` 需要从 [直播页面](https://link.bilibili.com/p/center/index#/my-room/start-live) 获取。
-
 ```json
 {
-    "folder": "/app/looplive/videos",
-    "bili_server_url": "rtmp://xxxxxxx",
-    "bili_key": "?streamname=xxxxxxxxxxxxxx",
-    "youtube_server_url": "rtmp://xxxxxxx", // 不需要可置为空 ""
-    "youtube_key": "xxxx-xxxx-xxxx-xxxx-xxxx" // 不需要可置为空 ""
+    "folder": "/app/looplive/videos", // 由于 docker 的挂载映射，最好不要修改这里
+    "bili_server_url": "rtmp://live-push.bilivideo.com/live-bvc/",
+    "bili_key": "?streamname=live_3541234541234567_8901234&key=looplivexxxxxxxxxxxxdgd&schedule=rtmp&pflag=1",
+    "youtube_server_url": "rtmp://a.rtmp.youtube.com/live2", // 不需要可置为空 ""
+    "youtube_key": "ghkh-sfgg-loop-live-live" // 不需要可置为空 ""
 }
 ```
 
@@ -114,7 +112,7 @@ sudo docker run -it \
     -v /your/path/to/config.json:/app/looplive/model/config.json \
     -v /your/path/to/videos:/app/looplive/videos \
     --name looplive_docker \
-    ghcr.io/timerring/looplive:0.0.1
+    ghcr.io/timerring/looplive:0.0.2
 ```
 
 ### 更多用法
@@ -128,14 +126,16 @@ looplive [-h] [-V] {check,add,reset,bili} ...
 The Python toolkit package and cli designed for auto loop live.
 
 positional arguments:
-  {check,add,reset,bili}
+  {check,add,reset,bili,ytb,both}
                         Subcommands
     check               Check the configuration
     add                 Add the configuration
     reset               Reset the configuration
     bili                Stream on the bilibili platform
+    ytb                 Stream on the youtube platform
+    both                Stream on the bilibili and youtube platform
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -V, --version         Print version information
 ```
