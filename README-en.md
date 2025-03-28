@@ -51,7 +51,7 @@ pip install looplive
 
 > To avoid command parameter parsing issues, please wrap each parameter in English double quotes `"`.
 
-https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-06-11.png
+![bilibili](https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-06-11.png)
 
 #### Youtube
 
@@ -61,7 +61,7 @@ https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-06-11.pn
 
 > To avoid command parameter parsing issues, please wrap each parameter in English double quotes `"`.
 
-https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-13-59.png
+![youtube](https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-13-59.png)
 
 #### Video Folder
 
