@@ -12,7 +12,9 @@ class Model:
         self.default_config = {
             "folder": "",
             "bili_server_url": "",
-            "bili_key": ""
+            "bili_key": "",
+            "ytb_server_url": "",
+            "ytb_key": ""
         }
 
     def get_default_config(self):
