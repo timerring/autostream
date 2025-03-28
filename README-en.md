@@ -20,7 +20,10 @@ The Python toolkit package and cli designed for auto loop live.
 ## Features
 
 - Supports 24/7 **automated loop streaming**
-- Supports **simultaneous streaming** to multiple platforms: Bilibili, Youtube (more platforms welcome via issues)
+- Supports **simultaneous streaming** to multiple platforms: 
+  - Bilibili
+  - Youtube
+  - More platforms welcome via [issue](https://github.com/timerring/looplive/issues)
 - Supports parameter memory, **configure once**, run automatically afterward
 - Supports Docker deployment
 

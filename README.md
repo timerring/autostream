@@ -20,7 +20,10 @@ The Python toolkit package and cli designed for auto loop live.
 ## 特点
 
 - 支持 7 x 24 小时**全自动循环直播**推流
-- 支持多平台**同时直播**: Bilibili、Youtube (更多平台欢迎 issue)
+- 支持多平台**同时直播**: 
+  - Bilibili
+  - Youtube
+  - 更多平台欢迎 [issue](https://github.com/timerring/looplive/issues)
 - 支持记忆参数，**仅需添加一次**，后续一键自动运行
 - 支持 Docker 部署
 
