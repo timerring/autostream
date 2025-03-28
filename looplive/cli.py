@@ -5,14 +5,36 @@ import sys
 import os
 import logging
 import threading
+import textwrap
 from looplive.controller.bili_controller import BiliController
 from looplive.controller.ytb_controller import YtbController
 from looplive.controller.config_controller import ConfigController
 
 
 def cli():
-    parser = argparse.ArgumentParser(description='The Python toolkit package and cli designed for auto loop live.')
-    parser.add_argument('-V', '--version', action='version', version='looplive 0.0.1', help='Print version information')
+    parser = argparse.ArgumentParser(
+        prog="looplive",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description=textwrap.dedent('''
+        The Python toolkit package and cli designed for auto loop live.
+        Source code at https://github.com/timerring/looplive
+        '''),
+        epilog=textwrap.dedent('''
+        Example:
+        looplive check
+        looplive add -bs "rtmp://xxx" -bk "?streamname=xxx" -ys "rtmp://xxx" -yk "xxx-xxx-xxx-xxx" -f "your/folder/path"
+        looplive bili
+        looplive ytb
+        looplive both
+        '''),
+    )
+    parser.add_argument(
+        "-V",
+        "--version",
+        action="version",
+        version="looplive 0.0.2 and source code at https://github.com/timerring/looplive",
+        help="Print version information",
+    )
 
     subparsers = parser.add_subparsers(dest='subcommand', help='Subcommands')
 
