@@ -56,7 +56,6 @@ pip install looplive
 #### Youtube
 
 1. Go to the [live streaming page](https://www.youtube.com/live_dashboard).
-2. Click `Start Live`.
 3. Get the Stream URL `-ys` and Stream key `-yk`.
 
 > To avoid command parameter parsing issues, please wrap each parameter in English double quotes `"`.

@@ -56,7 +56,6 @@ pip install looplive
 #### Youtube
 
 1. 前往 [直播页面](https://www.youtube.com/live_dashboard).
-2. 点击 `开始直播`.
 3. 获取推流服务器地址(Stream URL) `-ys` 和串流密钥(Stream key) `-yk`。
 
 > 为了避免命令参数被错误分隔，请使用英文双引号 `"` 包裹每一项参数。
