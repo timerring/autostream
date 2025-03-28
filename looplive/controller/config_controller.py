@@ -5,11 +5,25 @@ from looplive.model.model import Model
 class ConfigController:
     def __init__(self, path=None):
         self.model = Model(path=path)
-        
-    def check_config(self):
+
+    def check_folder_config(self):
         config_info = self.model.get_config()
-        if not config_info['bili_server_url'] or not config_info['bili_key'] or not config_info['folder']:
-            print("The configuration is not complete!", flush=True)
+        if not config_info['folder']:
+            print("The folder is not complete!", flush=True)
+            return False
+        return True
+        
+    def check_bili_config(self):
+        config_info = self.model.get_config()
+        if not self.check_folder_config() or not config_info['bili_server_url'] or not config_info['bili_key']:
+            print("The bilibili configuration is not complete!", flush=True)
+            return False
+        return True
+    
+    def check_ytb_config(self):
+        config_info = self.model.get_config()
+        if not self.check_folder_config() or not config_info['ytb_server_url'] or not config_info['ytb_key']:
+            print("The youtube configuration is not complete!", flush=True)
             return False
         return True
 
