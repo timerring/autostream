@@ -7,7 +7,9 @@
 
 简体中文 | [English](./README-en.md)
 
-`looplive` 是一个 7 x 24 小时全自动**循环多平台推流**直播工具，理论上只要平台有 rtmp 服务器就能支持，增加新的平台欢迎 [issue](https://github.com/timerring/looplive/issues)。
+`looplive` 是一个 7 x 24 小时全自动**循环多平台推流**直播工具。
+
+理论上只要平台有 rtmp 服务器就能支持，增加新的平台欢迎 [issue](https://github.com/timerring/looplive/issues)。
 
 The Python toolkit package and cli designed for auto loop live.
 
