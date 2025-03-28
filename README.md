@@ -51,7 +51,7 @@ pip install looplive
 
 > 为了避免命令参数被错误分隔，请使用英文双引号 `"` 包裹每一项参数。
 
-https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-06-11.png
+![bilibili](https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-06-11.png)
 
 #### Youtube
 
@@ -61,7 +61,7 @@ https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-06-11.pn
 
 > 为了避免命令参数被错误分隔，请使用英文双引号 `"` 包裹每一项参数。
 
-https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-13-59.png
+![youtube](https://cdn.jsdelivr.net/gh/timerring/scratchpad2023/2024/2025-03-28-22-13-59.png)
 
 #### 视频文件夹
 
