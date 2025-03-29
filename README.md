@@ -9,21 +9,22 @@
 
 `looplive` 是一个 7 x 24 小时全自动**循环多平台同时推流**直播工具。
 
-理论上只要平台有 rtmp 服务器就能支持，增加新的平台欢迎 [issue](https://github.com/timerring/looplive/issues)。
+支持平台(支持更多平台欢迎[issue](https://github.com/timerring/looplive/issues))
 
-The Python toolkit package and cli designed for auto loop live.
+  <img src="assets/bilibili.svg" alt="Bilibili" width="60" height="60" />
+  <img src="assets/youtube.svg" alt="Youtube" width="60" height="60" />
 
 </div>
 
-> 欢迎使用，欢迎提供更多反馈，欢迎 PR 贡献此项目，请勿用于违反社区规定的用途。
-
 ## 特点
+
+> 欢迎使用，欢迎提供更多反馈，欢迎 PR 贡献此项目，请勿用于违反社区规定的用途。
 
 - 支持 7 x 24 小时**全自动循环直播**推流
 - 支持多平台**同时直播**: 
   - Bilibili
   - Youtube
-  - 更多平台欢迎 [issue](https://github.com/timerring/looplive/issues)
+  - 理论上只要平台有 rtmp 服务器就能支持，增加新的平台欢迎 [issue](https://github.com/timerring/looplive/issues)。
 - 支持记忆参数，**仅需添加一次**，后续一键自动运行
 - 支持 Docker 部署
 

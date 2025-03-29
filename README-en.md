@@ -9,22 +9,23 @@
 
 `looplive` is a 24/7 automated **multi-platform simultaneous streaming** tool.
 
-Theoretically, any platform with RTMP servers can be supported. Feel free to open an [issue](https://github.com/timerring/looplive/issues) to request support for new platforms.
+Supported Platforms (support more platforms welcome via [issue](https://github.com/timerring/looplive/issues))
 
-The Python toolkit package and cli designed for auto loop live.
+  <img src="assets/bilibili.svg" alt="Bilibili" width="60" height="60" />
+  <img src="assets/youtube.svg" alt="Youtube" width="60" height="60" />
 
 </div>
 
-> Welcome to use looplive! Feedback and PR contributions are appreciated. Please do not use it for purposes that violate community guidelines.
-
 ## Features
 
+> Welcome to use, feedback is appreciated, PRs are welcome. Please do not use for purposes that violate community guidelines.
+
 - Supports 24/7 **automated loop streaming**
-- Supports **simultaneous streaming** to multiple platforms: 
+- Supports **simultaneous streaming** to multiple platforms:
   - Bilibili
   - Youtube
-  - More platforms welcome via [issue](https://github.com/timerring/looplive/issues)
-- Supports parameter memory, **configure once**, run automatically afterward
+  - Theoretically supports any platform with RTMP servers, more platforms welcome via [issue](https://github.com/timerring/looplive/issues)
+- Remembers parameters, **configure once**, run automatically afterwards
 - Supports Docker deployment
 
 ## Prerequisites
