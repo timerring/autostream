@@ -7,7 +7,7 @@
 
 [简体中文](./README.md) | English
 
-`looplive` is a 24/7 automated **multi-platform streaming** tool.
+`looplive` is a 24/7 automated **multi-platform simultaneous streaming** tool.
 
 Theoretically, any platform with RTMP servers can be supported. Feel free to open an [issue](https://github.com/timerring/looplive/issues) to request support for new platforms.
 
