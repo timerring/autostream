@@ -106,8 +106,8 @@ looplive both
     "folder": "/app/looplive/videos", // don't change this
     "bili_server_url": "rtmp://live-push.bilivideo.com/live-bvc/",
     "bili_key": "?streamname=live_3541234541234567_8901234&key=looplivexxxxxxxxxxxxdgd&schedule=rtmp&pflag=1",
-    "youtube_server_url": "rtmp://a.rtmp.youtube.com/live2", // Set to "" if not needed
-    "youtube_key": "ghkh-sfgg-loop-live-live" // Set to "" if not needed
+    "ytb_server_url": "rtmp://a.rtmp.youtube.com/live2", // Set to "" if not needed
+    "ytb_key": "ghkh-sfgg-loop-live-live" // Set to "" if not needed
 }
 ```
 
