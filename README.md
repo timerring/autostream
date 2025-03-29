@@ -105,8 +105,8 @@ looplive both
     "folder": "/app/looplive/videos", // 由于 docker 的挂载映射，最好不要修改这里
     "bili_server_url": "rtmp://live-push.bilivideo.com/live-bvc/",
     "bili_key": "?streamname=live_3541234541234567_8901234&key=looplivexxxxxxxxxxxxdgd&schedule=rtmp&pflag=1",
-    "youtube_server_url": "rtmp://a.rtmp.youtube.com/live2", // 不需要可置为空 ""
-    "youtube_key": "ghkh-sfgg-loop-live-live" // 不需要可置为空 ""
+    "ytb_server_url": "rtmp://a.rtmp.youtube.com/live2", // 不需要可置为空 ""
+    "ytb_key": "ghkh-sfgg-loop-live-live" // 不需要可置为空 ""
 }
 ```
 
